@@ -389,6 +389,5 @@ $objPHPExcel->getActiveSheet()->getPageSetup()->setPaperSize(PHPExcel_Worksheet_
 echo date('H:i:s') , " Rename second worksheet" , EOL;
 $objPHPExcel->getActiveSheet()->setTitle('Terms and conditions');
 
-
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);

@@ -80,7 +80,7 @@ $objPHPExcel->getActiveSheet()->getStyle('A10')->setQuotePrefix(true);
 
 // Rename worksheet
 echo date('H:i:s') , " Rename worksheet" , EOL;
-$objPHPExcel->getActiveSheet()->setTitle('Simple');
+//$objPHPExcel->getActiveSheet()->setTitle('Simple');
 
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
@@ -93,6 +93,7 @@ $callStartTime = microtime(true);
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 $objWriter->save(str_replace('.php', '.xlsx', __FILE__));
+die;
 $callEndTime = microtime(true);
 $callTime = $callEndTime - $callStartTime;
 

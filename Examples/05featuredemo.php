@@ -46,6 +46,7 @@ $callStartTime = microtime(true);
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 $objWriter->save(str_replace('.php', '.xlsx', __FILE__));
+die;
 $callEndTime = microtime(true);
 $callTime = $callEndTime - $callStartTime;
 
